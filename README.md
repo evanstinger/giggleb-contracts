@@ -1,6 +1,10 @@
 # GiggleFundBurn contracts
 The smart contracts set used to deploy and launch GiggleB token.
 
+## Deployment
+The Token smart contract has been deployed on BNB Chain at https://bscscan.com/tx/0xcfe9433fa96183574b68a0a583b906482d8f4d8ff67437e0e8efe8008e140dd7
+Contract address: 0x30EffEE860E407B60de454bDc754b3b271824444
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
