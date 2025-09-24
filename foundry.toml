@@ -1,0 +1,35 @@
+[profile.default]
+src = "src"
+out = "out"
+script = 'script'
+solc = '0.8.28'
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 100000
+ffi = true
+ast = true
+build_info = true
+extra_output = ["storageLayout"]
+libs = ["lib"]
+remappings = [
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/",
+  "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+  "forge-std/=lib/forge-std/src/"
+]
+fs_permissions = [
+    { access = "read", path = "./out/"},
+    { access = "read", path = "./script/input/"},
+]
+
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+sepolia = { key = "${ETHERSCAN_API_KEY}" }
+bsc-testnet = { key = "${ETHERSCAN_API_KEY}", chain = 97, url = "https://api-testnet.bscscan.com/api" }
+bsc = { key = "${ETHERSCAN_API_KEY}", chain = 56, url = "https://api.bscscan.com/api" }
+
+[rpc_endpoints]
+mainnet = "https://eth.drpc.org"
+sepolia = "https://ethereum-sepolia-rpc.publicnode.com"
+bsc = "https://bsc-dataseed1.bnbchain.org"
+bsc-testnet = "https://data-seed-prebsc-1-s3.bnbchain.org:8545"
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
